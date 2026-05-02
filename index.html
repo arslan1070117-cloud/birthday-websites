@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title><link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet"><style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: pink;
+}
+.page {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.active { display: flex; }
+
+.note {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 320px;
+  margin: 10px;
+}
+
+.yellow { background: #fff3b0; }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+}
+
+.btn {
+  margin-top: 20px;
+  background: red;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.box {
+  background: #ffe5ec;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+</style></head><body><!-- Page 1 --><div class="page active">
+  <div class="note">
+    <h1>Hy Baby 🩷</h1>
+    <p>Today Is Your Special Day. Let Me Celebrate The Incredible Women You Are. This My Gift To You. A little Journey Through Our Moments</p>
+  </div>
+  <div class="btn" onclick="next()">Next</div>
+</div><!-- Page 2 --><div class="page">
+  <img src="https://i.imgur.com/6NKPrhO.png" width="150">
+  <div class="note">
+    <h1>Birthday Memories</h1>
+    <p>There Are The Moment That Make You Most Beautiful Person To Me. Thanks For Being In My Life</p>
+  </div>
+  <div class="btn" onclick="next()">Read My Heart 😗</div>
+</div><!-- Page 3 --><div class="page" style="background: linear-gradient(pink,#fff3b0)">
+  <div class="note yellow">
+    <p><b>My Dearest Sadiya</b><br>
+    On Your Special Day I Want You To Know How Much You Mean To Me. You Are Most Beautiful Amazing And Wonderful Person. I Love You More Than Words I Say.</p>
+  </div>  <div class="note">
+    <h1>A Love Note</h1>
+    <p>A Few From Bottom Of My Heart</p>
+  </div>  <div class="btn" onclick="next()">Let's Play A Game</div>
+</div><!-- Page 4 --><div class="page" style="background: linear-gradient(#fff3b0,pink)">
+  <div class="note">
+    <h1>Why You Are Special</h1>
+    <p>Tap the Box To Reveal</p>
+  </div>  <div class="grid">
+    <div class="box" onclick="reveal(this,'🎂 You make every day feel like a celebration')">?</div>
+    <div class="box" onclick="reveal(this,'😚 Your laugh is my favorite sound')">?</div>
+    <div class="box" onclick="reveal(this,'🩷 The way you love me unconditionally')">?</div>
+    <div class="box" onclick="reveal(this,'🫠 You shine better than everyone')">?</div>
+    <div class="box" onclick="reveal(this,'🥰 You are a queen in every way')">?</div>
+    <div class="box" onclick="reveal(this,'🎨 Your creative and artistic soul')">?</div>
+    <div class="box" onclick="reveal(this,'🌹 Your beauty inside and out')">?</div>
+    <div class="box" onclick="reveal(this,'✨ The magic you bring in my life')">?</div>
+  </div>  <div class="btn" onclick="next()">Next</div>
+</div><!-- Page 5 --><div class="page">
+  <div class="note">
+    <h1>🎁</h1>
+    <p>Tap To Open</p>
+  </div>
+  <div class="btn" onclick="next()">Open</div>
+</div><!-- Page 6 --><div class="page">
+  <h1>❤️</h1>
+  <h1>I Love You</h1>
+  <p>Your Birthday Is Just Beginning I Have So Many More Happy Moments Planned For Us ❤️</p>
+  <div class="btn" onclick="next()">End?</div>
+</div><!-- Page 7 --><div class="page">
+  <div class="note">
+    <h1>Happy Birthday 🎂</h1>
+    <p>
+Happy Birthday meri jaan ❤️🎂  
+Aaj ka din meri life ke sab se special dinon mein se ek hai...  
+Main hamesha tumhare saath hoon ❤️  
+I love you so much 🥰
+    </p>
+  </div>
+  <div class="btn" onclick="restart()">Start Over</div>
+</div><script>
+let current = 0;
+let pages = document.querySelectorAll(".page");
+
+function next() {
+  pages[current].classList.remove("active");
+  current++;
+  pages[current].classList.add("active");
+}
+
+function restart() {
+  pages[current].classList.remove("active");
+  current = 0;
+  pages[current].classList.add("active");
+}
+
+function reveal(box, text) {
+  box.innerText = text;
+  box.style.background = "#ffccd5";
+  box.style.cursor = "default";
+}
+</script></body>
+</html>
